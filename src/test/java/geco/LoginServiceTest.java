@@ -8,6 +8,7 @@ import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 
 public class LoginServiceTest {
+
     @Test
     public void loginExists() throws Exception {
         String[] l = new String[3];
@@ -51,4 +52,5 @@ public class LoginServiceTest {
         assertThat(l2.contains("hi"), is(true));
         assertThat(l2.contains("h"), is(false));
     }
+
 }
