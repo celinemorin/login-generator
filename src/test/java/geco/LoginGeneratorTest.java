@@ -31,4 +31,13 @@ public class LoginGeneratorTest {
         assertThat(s, is("JRAL2"));
     }
 
+    @Test
+    public void testLoginPDU() throws Exception {
+        LoginService loginService = new LoginService(new String[] {"JROL", "BPER", "CGUR", "JDUP", "JRAL", "JRAL1"});
+        LoginGenerator loginGenerator = new LoginGenerator(loginService);
+        String s = loginGenerator.generateLoginForNomAndPrenom("Du", "Paul");
+        System.out.println(s);
+        assertThat(s, is("PDU"));
+    }
+
 }
